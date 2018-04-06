@@ -1,4 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+*.iml
+.gradle
+/local.properties
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+=======
+>>>>>>> 15ca4b46abc703e09fb2dcb30d7a6d1a13b6c6fe
 # Built application files
 *.apk
 *.ap_
@@ -54,6 +68,7 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+<<<<<<< HEAD
 =======
 *.iml
 .gradle
@@ -66,3 +81,6 @@ freeline_project_description.json
 /captures
 .externalNativeBuild
 >>>>>>> ae08763... First Commit. Completed till ViewModel
+=======
+>>>>>>> 9eec82bbb8c0d06178f4dd74bd76cae1243135b8
+>>>>>>> 15ca4b46abc703e09fb2dcb30d7a6d1a13b6c6fe
