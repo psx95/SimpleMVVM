@@ -1,26 +1,30 @@
 package com.psx.tictactoe.Model;
 
+import android.arch.lifecycle.MutableLiveData;
+
 public class Game {
 
     private Player player1;
     private Player player2;
 
     private Player currentPlayer = player1;
-    private Player winner = null;
+    public MutableLiveData<Player> winner = new MutableLiveData<>();
 
     private Cell[][] cells;
 
-    public Game () {
+    public Game(String playerOne, String playerTwo) {
         cells = new Cell[3][3];
+        player1 = new Player(playerOne, "X");
+        player2 = new Player(playerTwo, "O");
+        currentPlayer = player1;
     }
-
     public void switchPlayer () {
         currentPlayer = (currentPlayer == player1) ? player2 : player1;
     }
 
     public boolean hasGameEnded () {
         if (hasThreeVerticalCells() || hasThreeHorizontalCells() || hasThreeDiagonalCells()) {
-            winner = currentPlayer;
+            winner.setValue(currentPlayer);
             return true;
         }
         return false;
@@ -93,11 +97,11 @@ public class Game {
         this.currentPlayer = currentPlayer;
     }
 
-    public Player getWinner() {
+    public MutableLiveData<Player> getWinner() {
         return winner;
     }
 
-    public void setWinner(Player winner) {
+    public void setWinner(MutableLiveData<Player> winner) {
         this.winner = winner;
     }
 
